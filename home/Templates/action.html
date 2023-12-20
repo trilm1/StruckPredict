@@ -1,0 +1,107 @@
+{% include 'header.html' %}
+<!-- Main -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    header, footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    label, select {
+        display: block;
+        margin-bottom: 8px;
+    }
+    select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<form action="{% url 'predict' %}" method="post" id="patientForm">
+    {% csrf_token %}
+    {% if prediction == 0 %}
+    <p><b><font size="5" color="rgb(208,31,93)">Chúc mừng bạn không có nguy cơ đột quỵ</font></b></p>
+    <p><b><font size="5" color="rgb(208,31,93)">Mời bạn nhập thông tin</font></b></p>
+    {% elif prediction == 1 %}
+    <p><b><font size="5" color="rgb(208,31,93)">Bạn có nguy cơ đột quỵ, vui lòng chú ý sức khoẻ!</font></b></p>
+    <p><b><font size="5" color="rgb(208,31,93)">Mời bạn nhập thông tin</font></b></p>
+    {% else %}
+        <p><b><font size="5" color="rgb(208,31,93)">Mời bạn nhập thông tin</font></b></p>
+    {% endif %}
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value=1>Male</option>
+        <option value=0>Female</option>
+    </select>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="hypertension">Hypertension:</label>
+    <select id="hypertension" name="hypertension" required>
+        <option value=0>No</option>
+        <option value=1>Yes</option>
+    </select>
+
+    <label for="heart_disease">Heart Disease:</label>
+    <select id="heart_disease" name="heart_disease" required>
+        <option value=0>No</option>
+        <option value=1>Yes</option>
+    </select>
+
+    <label for="ever_married">Ever Married:</label>
+    <select id="ever_married" name="ever_married" required>
+        <option value=1>No</option>
+        <option value=0>Yes</option>
+    </select>
+
+    <label for="work_type">Work Type:</label>
+    <select id="work_type" name="work_type" required>
+        <option value="Private">Private</option>
+        <option value="Self-employed">Self-employed</option>
+        <option value="Govt_job">Govt Job</option>
+        <option value="children">Children</option>
+    </select>
+
+    <label for="Residence_type">Residence Type:</label>
+    <select id="Residence_type" name="Residence_type" required>
+        <option value=0>Urban</option>
+        <option value=1>Rural</option>
+    </select>
+
+    <label for="avg_glucose_level">Average Glucose Level:</label>
+    <input type="number" id="avg_glucose_level" name="avg_glucose_level" required>
+
+    <label for="bmi">BMI:</label>
+    <input type="number" id="bmi" name="bmi" required>
+
+    <label for="smoking_status">Smoking Status:</label>
+    <select id="smoking_status" name="smoking_status" required>
+        <option value="Unknown">Unknown</option>
+        <option value="formerly_smoked">Formerly Smoked</option>
+        <option value="never_smoked">Never Smoked</option>
+        <option value="smokes">Smokes</option>
+    </select>
+
+    <button type="submit" onclick="submitForm()">Submit</button>
+</form>
+
+<!-- end main -->
+{% include 'footer.html' %}

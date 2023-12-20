@@ -1,0 +1,73 @@
+{% load static %}
+{% include 'header.html' %}
+<!-- Main -->
+<style>
+  .hidenavt {
+    visibility: hidden;
+  }
+</style>
+<div class="creative-member-area fix">
+  <div class="container">
+    <!-- section-heading start -->
+    <div class="row bg-warning">
+      <div class="col-md-12">
+        <div class="section-heading fadeInUp animated">
+          <center>
+            <h2>OUR CREATIVE <strong>MEMBER</strong></h2>
+          </center>
+          <center>
+            <p>Welcome to our website: Where Passion Meets Innovation. Our team at here isn't just a group of individuals; we're a collective force driven by a shared vision. Each member brings their unique talents, creativity, and dedication to the table, playing a pivotal role in shaping the very essence of The Page Of Minh Tri. Together, we've embarked on an inspiring journey, working tirelessly to bring our project to life. Explore the incredible stories, diverse backgrounds, and remarkable contributions of our team members as we introduce you to the driving force behind this website.</p>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- section-heading end -->
+    <div class="row bg-info">
+      <!-- single-creative-member start -->
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
+        <div class="single-creative-member fadeInUp animated">
+          <div class="member-photo">
+            <img src={%static 'app/images/nhuNguyen.jpg' %} width = "380" height="350" alt="" />
+          </div>
+          <div class="member-info">
+            <span class="member-name">Huỳnh Nguyễn Như Nguyên</span>
+            <br />
+            <span class="member-role">Manager/Admin/Creater</span>
+          </div>
+          <div class="member-icons">
+            <a href="https://www.facebook.com/nguyennnhuynhh"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- single-creative-member start -->
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      </div>
+      <!-- single-creative-member end -->
+      <!-- single-creative-member start -->
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="single-creative-member fadeInUp animated">
+          <div class="member-photo">
+            <img src={%static 'app/images/avt1.jpg' %} width = "380" height="350" alt="" />
+          </div>
+          <div class="member-info">
+            <span class="member-name">Lê Minh Trí</span>
+            <br />
+            <span class="member-role">Manager/Admin/Creater</span>
+          </div>
+          <div class="member-icons">
+            <a href="https://www.facebook.com/profile.php?id=100008605751630"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/lemon.tree.26/"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- single-creative-member end -->
+    </div>
+  </div>
+</div>
+<div>
+  <!-- end main -->
+  {% include 'footer.html' %}
+</div>

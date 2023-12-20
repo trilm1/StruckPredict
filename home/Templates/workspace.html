@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'header.html' %}
+<!-- Main -->
+<div class="container">
+    <div class = "row">
+      <center><p><b><font size="7" color="rgb(208,31,93)">Các biểu đồ trực quan về mô hình</font></b></p></center>
+    </div>
+    <div class = "row" style="background-color: rgba(201, 76, 76, 0.3);">
+      <center><p><b><font size="5" color="rgb(208,31,93)">Tương quan giữa Loss và Epsilon</font></b></p></center>
+    </div>
+    <div class="row">
+      <img src={%static 'app/images/epsilonAndLoss.JPG' %} width = "1300" height="550" alt="" />
+    </div>
+    <div class="row" >
+      <div class="row" style="background-color: #92a8d1;">
+        <center><p><b><font size="5" color="rgb(208,31,93)">Sự khác độ chính xác trước và sau khi áp dụng DP</font></b></p></center>
+      </div>
+      <div class = 'col'>
+        <img src={%static 'app/images/ConfusionMatrixLogBefore.JPG' %} width = "600" height="500" alt="" />
+      </div>
+      <div class = 'col'>
+        <img src={%static 'app/images/ConfusionMatrixLogAfter.JPG' %} width = "600" height="500" alt="" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="row" style="background-color: rgba(201, 76, 76, 0.3);">
+        <center><p><b><font size="5" color="rgb(208,31,93)">Trực quan các độ đo của mô hình</font></b></p></center>
+      </div>
+      <div class = 'col'>
+        <img src={%static 'app/images/ModelScore.jpg' %} width = "1300" height="550" alt="" />
+      </div>
+    </div>
+</div>
+<!-- end main -->
+{% include 'footer.html' %}

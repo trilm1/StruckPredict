@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block banner_slider %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1000">
+        <img src="{% static 'app/images/banner/b1.png' %}" class="d-block w-100" alt="..." height="480">
+        <div class="carousel-caption d-none d-md-block bg-success text-white">
+          <h5>Differential Privacy</h5>
+          <p>Your Data, Your Privacy Shield.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="..." height="480">
+        <div class="carousel-caption d-none d-md-block bg-success text-white">
+          <h5>Machine Learning</h5>
+          <p>Unleashing Intelligent Solutions.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="..." height="480">
+        <div class="carousel-caption d-none d-md-block bg-success text-white">
+          <h5>Health Care</h5>
+          <p>Your Wellness, Our Priority.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner_slider %}
+{%block main-content%}
+  <div class = "row">
+    <center><p><b><font size="5" color="rgb(208,31,93)">BẢO MẬT KHÁC BIỆT TRONG BẢO VỆ DỮ LIỆU BỆNH NHÂN<br> VÀ <br> ỨNG DỤNG KỸ THUẬT HỌC MÁY TRONG CHẨN ĐOÁN BỆNH</font></b></p></center>
+  </div>
+  <div class = "row">
+    <center>
+      <img src="{% static 'app/images/DP1.png' %}" height = "500" width="1000">
+    </center>
+  </div>
+  <div class="row">
+    <p class="indent"><b><font size="3">1. Thế nào là bảo mật khác biệt?</font></b></p>
+    <p class="indent"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; Differential privacy là một khung công cụ để bảo vệ sự riêng tư của cá nhân khi phân tích dữ liệu, đặc biệt là trong các tình huống dữ liệu có thể chứa thông tin nhạy cảm hoặc cá nhân. Mục tiêu của differential privacy là cho phép trích xuất thông tin hữu ích từ dữ liệu trong khi đảm bảo rằng thông tin riêng tư của cá nhân sẽ được giữ bí mật. Trong project này, nhóm sẽ sử dụng DP vào học máy cụ thể là sử dụng DP cho việc dự đoán liệu một người có thể bị đột quỵ hay không?</font></p>
+  </div>
+  <br/><br/><br/>
+{%endblock main-content%}
